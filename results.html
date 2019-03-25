@@ -1,7 +1,7 @@
 <head>
 <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:400,700" rel="stylesheet">
 <link href='style.css' rel='stylesheet' type='text/css'>
-<title>8values Results</title>
+<title>6axes Results</title>
 <link rel="icon" type="x-icon" href="icon.png">
 <link rel="shortcut icon" type="x-icon" href="icon.png">
 <meta charset="utf-8">
@@ -14,44 +14,61 @@
 </script>
 
 <body>
-<h1>8values</h1>
+<h1>6axes</h1>
 <hr>
 
 <h1>Results</h1>
 
-<h2>Economic Axis: <span class="weight-300" id="economic-label"></span></h2>
+<h2>Authority Axis: <span class="weight-300" id="authority-label"></span></h2>
 <div class="axis">
-    <img id="img-equality" src="value_images/equality.svg" height="128pt"/>
-    <div class="bar equality" id="bar-equality"><div class="text-wrapper" id="equality"></div></div>
-    <div class="bar wealth" id="bar-wealth"><div class="text-wrapper" id="wealth"></div></div>
-    <img id="img-wealth" src="value_images/wealth.svg" height="128pt"/>
+    <img id="img-liberty" src="images/Liberty.png" height="128pt"/>
+    <div class="bar liberty" id="bar-akraetia"><div class="text-wrapper" id="akraetia"></div></div>
+    <div class="bar authority" id="bar-authority"><div class="text-wrapper" id="authority"></div></div>
+    <img id="img-authority" src="images/Authority.png" height="128pt"/>
+</div>
+<h2>Rank Axis: <span class="weight-300" id="anarche-label"></span></h2>
+<div class="axis">
+    <img id="img-rank" src="images/Rank.png" height="128pt"/>
+    <div class="bar rank" id="bar-rank"><div class="text-wrapper" id="rank"></div></div>
+    <div class="bar anarche" id="bar-anarche"><div class="text-wrapper" id="anarche"></div></div>
+    <img id="img-egalitarian" src="images/Egalitarian.png" height="128pt"/>
+</div>
+
+<h2>Economic Aspiration Axis: <span class="weight-300" id="economic-asp-label"></span></h2>
+<div class="axis">
+    <img id="img-econ-equality" src="images/Economic_Equity.png" height="128pt"/>
+    <div class="bar econ_equality" id="bar-econ_equality"><div class="text-wrapper" id="econ_equality"></div></div>
+    <div class="bar econ_eff" id="bar-econ_efficiency"><div class="text-wrapper" id="econ_efficiency"></div></div>
+    <img id="img-econ-efficiency" src="images/Economic_Efficiency.png" height="128pt"/>
+</div>
+<h2>Economic Control Axis: <span class="weight-300" id="econ-control-label"></span></h2>
+<div class="axis">
+    <img id="img-econ-labor" src="images/Labor.png" height="128pt"/>
+    <div class="bar econ_labor" id="bar-econ_labor_control"><div class="text-wrapper" id="econ_labor_control"></div></div>
+    <div class="bar econ_capital" id="bar-econ_capital_control"><div class="text-wrapper" id="econ_capital_control"></div></div>
+    <img id="img-econ-capital" src="images/Capital.png" height="128pt"/>
+</div>
+
+<h2>Nationalism Axis: <span class="weight-300" id="nationalism-label"></span></h2>
+<div class="axis">
+    <img id="img-ethnic-national" src="images/Ethnic.png" height="128pt"/>
+    <div class="bar ethnic_national" id="bar-ethnic_nationalism"><div class="text-wrapper" id="ethnic_nationalism"></div></div>
+    <div class="bar civic_national" id="bar-civic_nationalism"><div class="text-wrapper" id="civic_nationalism"></div></div>
+    <img id="img-civic-national" src="images/Civic.png" height="128pt"/>
 </div>
 <h2>Diplomatic Axis: <span class="weight-300" id="diplomatic-label"></span></h2>
 <div class="axis">
-    <img id="img-might" src="value_images/might.svg" height="128pt"/>
-    <div class="bar might" id="bar-might"><div class="text-wrapper" id="might"></div></div>
-    <div class="bar peace" id="bar-peace"><div class="text-wrapper" id="peace"></div></div>
-    <img id="img-peace" src="value_images/peace.svg" height="128pt"/>
+    <img id="img-cosmopolitan" src="images/Cosmopolitanism.png" height="128pt"/>
+    <div class="bar cosmopolitan" id="bar-cosmopolitan"><div class="text-wrapper" id="cosmopolitan"></div></div>
+    <div class="bar autarky" id="bar-autarky"><div class="text-wrapper" id="autarky"></div></div>
+    <img id="img-autarky" src="images/Autarky.png" height="128pt"/>
 </div>
-<h2>Civil Axis: <span class="weight-300" id="state-label"></span></h2>
-<div class="axis">
-    <img id="img-liberty" src="value_images/liberty.svg" height="128pt"/>
-    <div class="bar liberty" id="bar-liberty"><div class="text-wrapper" id="liberty"></div></div>
-    <div class="bar authority" id="bar-authority"><div class="text-wrapper" id="authority"></div></div>
-    <img id="img-authority" src="value_images/authority.svg" height="128pt"/>
-</div>
-<h2>Societal Axis: <span class="weight-300" id="society-label"></span></h2>
-<div class="axis">
-    <img id="img-tradition" src="value_images/tradition.svg" height="128pt"/>
-    <div class="bar tradition" id="bar-tradition"><div class="text-wrapper" id="tradition"></div></div>
-    <div class="bar progress" id="bar-progress"><div class="text-wrapper" id="progress"></div></div>
-    <img id="img-progress" src="value_images/progress.svg" height="128pt"/>
-</div>
+
 <h2>Closest Match: <span class="weight-300" id="ideology-label"></span></h2>
 <p>Ideological matching is a work in progress, and is much less accurate than the values and axes.</p>
 <p>You can send these results by copying and pasting the URL at the top of the page or using the image below. Think your matched ideology was wrong? Want to help us calibrate the test? Send the results along with your political ideology to us at eightvalues@gmail.com, or send us any comments, questions, or criticism. </p>
 <hr/>
-<canvas id="banner" width=800 height=650 style="font-family:Montserrat"></canvas>
+<canvas id="banner" width=800 height=950 style="font-family:Montserrat"></canvas>
 <button class="button" onclick="location.href='index.html';" style="background-color: #2196f3;">Back</button> <br>
 <!-- Website visit statistics - no personal information is collected! -->
 <script type="text/javascript">
@@ -91,11 +108,13 @@ stats"></a></div></noscript>
         }
     }
 
-    econArray = ["Communist","Socialist","Social","Centrist","Market","Capitalist","Laissez-Faire"]
+    econ_aspArray = ["Communist","Socialist","Social","Centrist","Market","Capitalist","Laissez-Faire"]
+    econ_controlArray = ["Communist","Socialist","Social","Centrist","Market","Capitalist","Laissez-Faire"]
     diplArray = ["Cosmopolitan","Internationalist","Peaceful","Balanced","Patriotic","Nationalist","Chauvinist"]
-    govtArray = ["Anarchist","Libertarian","Liberal","Moderate","Statist","Authoritarian","Totalitarian"]
-    sctyArray = ["Revolutionary","Very Progressive","Progressive","Neutral","Traditional","Very Traditional","Reactionary"]
-
+    akraetiaArray = ["Anarchist","Libertarian","Liberal","Moderate","Statist","Authoritarian","Totalitarian"]
+    anarcheArray = ["Revolutionary","Very Progressive","Progressive","Neutral","Traditional","Very Traditional","Reactionary"]
+    nationalismArray = ["Revolutionary","Very Progressive","Progressive","Neutral","Traditional","Very Traditional","Reactionary"]
+  
     function setLabel(val,ary) {
         if (val > 100) { return "" } else
         if (val > 90) { return ary[0] } else
@@ -108,37 +127,54 @@ stats"></a></div></noscript>
         	{return ""}
     }
 
-    equality  = getQueryVariable("e")
-    peace     = getQueryVariable("d")
-    liberty   = getQueryVariable("g")
-    progress  = getQueryVariable("s")
-    wealth    = (100 - equality).toFixed(1)
-    might     = (100 - peace   ).toFixed(1)
-    authority = (100 - liberty ).toFixed(1)
-    tradition = (100 - progress).toFixed(1)
+    akraetia = getQueryVariable("ak")
+    anarche = getQueryVariable("an")
+    econ_equality = getQueryVariable("ea")
+    econ_labor_control = getQueryVariable("ec")
+    civic_nationalism = getQueryVariable("na")
+    cosmopolitan = getQueryVariable("co")
+  
+    authority = (100 - akraetia ).toFixed(1)
+    rank = (100 - anarche).toFixed(1)
+    econ_efficiency = (100 - econ_equality).toFixed(1)
+    econ_capital_control = (100 - econ_labor_control).toFixed(1)
+    ethnic_nationalism = (100 - civic_nationalism).toFixed(1)
+    autarky = (100 - cosmopolitan).toFixed(1)
 
-    setBarValue("equality", equality)
-    setBarValue("wealth", wealth)
-    setBarValue("peace", peace)
-    setBarValue("might", might)
-    setBarValue("liberty", liberty)
     setBarValue("authority", authority)
-    setBarValue("progress", progress)
-    setBarValue("tradition", tradition)
+    setBarValue("akraetia", akraetia)
 
-    document.getElementById("economic-label").innerHTML = setLabel(equality, econArray)
-    document.getElementById("diplomatic-label").innerHTML = setLabel(peace, diplArray)
-    document.getElementById("state-label").innerHTML = setLabel(liberty, govtArray)
-    document.getElementById("society-label").innerHTML = setLabel(progress, sctyArray)
+    setBarValue("rank", rank)
+    setBarValue("anarche", anarche)
+
+    setBarValue("econ_equality", econ_equality)
+    setBarValue("econ_efficiency", econ_efficiency)
+
+    setBarValue("econ_labor_control", econ_labor_control)
+    setBarValue("econ_capital_control", econ_capital_control)
+
+    setBarValue("ethnic_nationalism", ethnic_nationalism)
+    setBarValue("civic_nationalism", civic_nationalism)
+
+    setBarValue("cosmopolitan", cosmopolitan)
+    setBarValue("autarky", anarche)
+
+  
+    document.getElementById("authority-label").innerHTML = setLabel(akraetia, akraetiaArray)
+    document.getElementById("anarche-label").innerHTML = setLabel(anarche, anarcheArray)
+    document.getElementById("economic-asp-label").innerHTML = setLabel(econ_equality, econ_aspArray)
+    document.getElementById("econ-control-label").innerHTML = setLabel(econ_labor_control, econ_controlArray)
+    document.getElementById("nationalism-label").innerHTML = setLabel(civic_nationalism, nationalismArray)
+    document.getElementById("diplomatic-label").innerHTML = setLabel(cosmopolitan, diplArray)
 
     ideology = ""
     ideodist = Infinity
     for (var i = 0; i < ideologies.length; i++) {
         dist = 0
-        dist += Math.pow(Math.abs(ideologies[i].stats.econ - equality), 2)
-        dist += Math.pow(Math.abs(ideologies[i].stats.govt - liberty), 2)
-        dist += Math.pow(Math.abs(ideologies[i].stats.dipl - peace), 1.73856063)
-        dist += Math.pow(Math.abs(ideologies[i].stats.scty - progress), 1.73856063)
+        dist += Math.pow(Math.abs(ideologies[i].stats.econ_asp - econ_equality), 2)
+        dist += Math.pow(Math.abs(ideologies[i].stats.akraetia - akraetia), 2)
+        dist += Math.pow(Math.abs(ideologies[i].stats.cosmopolitanism - cosmopolitan), 1.73856063)
+        dist += Math.pow(Math.abs(ideologies[i].stats.anarche - anarche), 1.73856063)
         if (dist < ideodist) {
             ideology = ideologies[i].name
             ideodist = dist
@@ -158,72 +194,109 @@ stats"></a></div></noscript>
         var c = document.getElementById("banner")
         var ctx = c.getContext("2d")
         ctx.fillStyle = "#EEEEEE"
-        ctx.fillRect(0,0,800,600)
+        ctx.fillRect(0,0,1000,1200)
 
-        img = document.getElementById("img-equality")
-        ctx.drawImage(img, 20, 170, 100, 100);
-        img = document.getElementById("img-wealth")
-        ctx.drawImage(img, 680, 170, 100, 100)
-        img = document.getElementById("img-might")
-        ctx.drawImage(img, 20, 290, 100, 100)
-        img = document.getElementById("img-peace")
-        ctx.drawImage(img, 680, 290, 100, 100)
+
         img = document.getElementById("img-liberty")
-        ctx.drawImage(img, 20, 410, 100, 100)
+        ctx.drawImage(img, 20, 170, 100, 100);
         img = document.getElementById("img-authority")
+        ctx.drawImage(img, 680, 170, 100, 100)
+        img = document.getElementById("img-rank")
+        ctx.drawImage(img, 20, 290, 100, 100)
+        img = document.getElementById("img-egalitarian")
+        ctx.drawImage(img, 680, 290, 100, 100)
+        img = document.getElementById("img-econ-equality")
+        ctx.drawImage(img, 20, 410, 100, 100)
+        img = document.getElementById("img-econ-efficiency")
         ctx.drawImage(img, 680, 410, 100, 100)
-        img = document.getElementById("img-tradition")
+        img = document.getElementById("img-econ-capital")
         ctx.drawImage(img, 20, 530, 100, 100)
-        img = document.getElementById("img-progress")
+        img = document.getElementById("img-econ-labor")
         ctx.drawImage(img, 680, 530, 100, 100)
-
+        img = document.getElementById("img-ethnic-national")
+        ctx.drawImage(img, 20, 650, 100, 100)
+        img = document.getElementById("img-civic-national")
+        ctx.drawImage(img, 680, 650, 100, 100)
+        img = document.getElementById("img-cosmopolitan")
+        ctx.drawImage(img, 20, 770, 100, 100)
+        img = document.getElementById("img-autarky")
+        ctx.drawImage(img, 680, 770, 100, 100)
+	
         ctx.fillStyle="#222222"
         ctx.fillRect(120, 180, 560, 80)
         ctx.fillRect(120, 300, 560, 80)
         ctx.fillRect(120, 420, 560, 80)
         ctx.fillRect(120, 540, 560, 80)
-        ctx.fillStyle="#f44336"
-        ctx.fillRect(120, 184, 5.6*equality-2, 72)
-        ctx.fillStyle="#00897b"
-        ctx.fillRect(682-5.6*wealth, 184, 5.6*wealth-2, 72)
-        ctx.fillStyle="#ff9800"
-        ctx.fillRect(120, 304, 5.6*might-2, 72)
-        ctx.fillStyle="#03a9f4"
-        ctx.fillRect(682-5.6*peace, 304, 5.6*peace-2, 72)
-        ctx.fillStyle="#ffeb3b"
-        ctx.fillRect(120, 424, 5.6*liberty-2, 72)
-        ctx.fillStyle="#3f51b5"
-        ctx.fillRect(682-5.6*authority, 424, 5.6*authority-2, 72)
-        ctx.fillStyle="#8bc34a"
-        ctx.fillRect(120, 544, 5.6*tradition-2, 72)
-        ctx.fillStyle="#9c27b0"
-        ctx.fillRect(682-5.6*progress, 544, 5.6*progress-2, 72)
+        ctx.fillRect(120, 660, 560, 80)
+        ctx.fillRect(120, 780, 560, 80)
+	
+        ctx.fillStyle="#c0c5e8"
+        ctx.fillRect(120, 184, 5.6*akraetia-2, 72)
+        ctx.fillStyle="#192894"
+        ctx.fillRect(682-5.6*authority, 184, 5.6*authority-2, 72)
+	
+        ctx.fillStyle="#d7b5e2"
+        ctx.fillRect(120, 304, 5.6*rank-2, 72)
+        ctx.fillStyle="#720097"
+        ctx.fillRect(682-5.6*anarche, 304, 5.6*anarche-2, 72)
+	
+        ctx.fillStyle="#efaeae"
+        ctx.fillRect(120, 424, 5.6*econ_equality-2, 72)
+        ctx.fillStyle="#ff0000"
+        ctx.fillRect(682-5.6*econ_efficiency, 424, 5.6*econ_efficiency-2, 72)
+
+        ctx.fillStyle="#beeae3"
+        ctx.fillRect(120, 544, 5.6*econ_labor_control-2, 72)
+        ctx.fillStyle="#006a58"
+        ctx.fillRect(682-5.6*econ_capital_control, 544, 5.6*econ_capital_control-2, 72)
+	
+        ctx.fillStyle="#f2b998"
+        ctx.fillRect(120, 664, 5.6*ethnic_nationalism-2, 72)
+        ctx.fillStyle="#ff5d00"
+        ctx.fillRect(682-5.6*civic_nationalism, 664, 5.6*civic_nationalism-2, 72)
+	
+        ctx.fillStyle="#97ccf4"
+        ctx.fillRect(120, 784, 5.6*cosmopolitan-2, 72)
+        ctx.fillStyle="#0074ce"
+        ctx.fillRect(682-5.6*autarky, 784, 5.6*autarky-2, 72)
+	
         ctx.fillStyle="#222222"
         ctx.font="700 80px Montserrat"
         ctx.textAlign="left"
-        ctx.fillText("8values", 20, 90)
+        ctx.fillText("6axes", 20, 90)
         ctx.font="50px Montserrat"
         ctx.fillText(ideology, 20, 140)
 
         ctx.textAlign="left"
-        if (equality  > 30) {ctx.fillText(equality + "%", 130, 237.5)}
-        if (might     > 30) {ctx.fillText(might + "%", 130, 357.5)}
-        if (liberty   > 30) {ctx.fillText(liberty + "%", 130, 477.5)}
-        if (tradition > 30) {ctx.fillText(tradition + "%", 130, 597.5)}
-        ctx.textAlign="right"
-        if (wealth    > 30) {ctx.fillText(wealth + "%", 670, 237.5)}
-        if (peace     > 30) {ctx.fillText(peace + "%", 670, 357.5)}
-        if (authority > 30) {ctx.fillText(authority + "%", 670, 477.5)}
-        if (progress  > 30) {ctx.fillText(progress + "%", 670, 597.5)}
+        if (akraetia > 30) {ctx.fillText(akraetia + "%", 130, 237.5)}
+        if (rank > 30) {ctx.fillText(rank + "%", 130, 357.5)}
 
+        if (econ_equality > 30) {ctx.fillText(econ_equality + "%", 130, 477.5)}
+        if (econ_labor_control > 30) {ctx.fillText(econ_labor_control + "%", 130, 597.5)}
+
+        if (ethnic_nationalism > 30) {ctx.fillText(ethnic_nationalism + "%", 130, 717.5)}
+        if (cosmopolitan > 30) {ctx.fillText(cosmopolitan + "%", 130, 837.5)}
+
+	ctx.textAlign="right"
+        if (authority > 30) {ctx.fillText(authority + "%", 670, 237.5)}
+        if (anarche > 30) {ctx.fillText(anarche + "%", 670, 357.5)}
+
+        if (econ_efficiency > 30) {ctx.fillText(econ_efficiency + "%", 670, 477.5)}
+        if (econ_capital_control > 30) {ctx.fillText(econ_capital_control + "%", 670, 597.5)}
+
+        if (civic_nationalism > 30) {ctx.fillText(civic_nationalism + "%", 670, 717.5)}
+        if (autarky > 30) {ctx.fillText(autarky + "%", 670, 837.5)}
+	
         ctx.font="300 30px Montserrat"
-        ctx.fillText("8values.github.io", 780, 60)
-		ctx.fillText(version, 780, 90)
+        ctx.fillText("6axes.github.io", 780, 60)
+	ctx.fillText(version, 780, 90)
         ctx.textAlign="center"
-        ctx.fillText("Economic Axis: " + document.getElementById("economic-label").innerHTML, 400, 175)
-        ctx.fillText("Diplomatic Axis: " + document.getElementById("diplomatic-label").innerHTML, 400, 295)
-        ctx.fillText("Civil Axis: " + document.getElementById("state-label").innerHTML, 400, 415)
-        ctx.fillText("Societal Axis: " + document.getElementById("society-label").innerHTML, 400, 535)
+        ctx.fillText("Authoritarian Axis: " + document.getElementById("authority-label").innerHTML, 400, 175)
+        ctx.fillText("Rank Axis: " + document.getElementById("anarche-label").innerHTML, 400, 295)
+        ctx.fillText("Economic Aspiration Axis: " + document.getElementById("economic-asp-label").innerHTML, 400, 415)
+        ctx.fillText("Economic Control Axis: " + document.getElementById("econ-control-label").innerHTML, 400, 535)
+        ctx.fillText("Nationalism Axis: " + document.getElementById("nationalism-label").innerHTML, 400, 655)
+        ctx.fillText("Diplomatic Axis: " + document.getElementById("diplomatic-label").innerHTML, 400, 775)
     }
     </script>
 </body>

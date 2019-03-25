@@ -1,7 +1,7 @@
 <head>
 <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:400,700" rel="stylesheet">
 <link href='style.css' rel='stylesheet' type='text/css'>
-<title>8values Quiz</title>
+<title>6axes Quiz</title>
 <link rel="icon" type="x-icon" href="icon.png">
 <link rel="shortcut icon" type="x-icon" href="icon.png">
 <meta charset="utf-8">
@@ -17,7 +17,7 @@
 <script type="application/javascript"
         src="questions.js">
 </script>
-<h1>8values</h1>
+<h1>6axes</h1>
 <hr>
 <h2 style="text-align:center;" id="question-number">Loading...</h2>
 <p class="question" id="question-text"></p>
@@ -48,18 +48,21 @@ stats"></a></div></noscript>
 
 <!-- JavaScript for the test itself -->
 <script>
-    var max_econ, max_dipl, max_govt, max_scty; // Max possible scores
-    max_econ = max_dipl = max_govt = max_scty = 0;
-    var econ, dipl, govt, scty; // User's scores
-    econ = dipl = govt = scty = 0;
+    var max_econ_asp, max_econ_control, max_cosmopolitanism, max_akraetia, max_anarche, max_nationalism; // Max possible scores
+    max_econ_control = max_econ_asp = max_cosmopolitanism = max_akraetia = max_anarche = max_nationalism = 0;
+    var econ_control, econ_asp, cosmopolitanism, akraetia, anarche, nationalism; // User's scores
+    econ_control = econ_asp = cosmopolitanism = akraetia = anarche = nationalism = 0;
     var qn = 0; // Question number
     var prev_answer = null;
     init_question();
     for (var i = 0; i < questions.length; i++) {
-        max_econ += Math.abs(questions[i].effect.econ)
-        max_dipl += Math.abs(questions[i].effect.dipl)
-        max_govt += Math.abs(questions[i].effect.govt)
-        max_scty += Math.abs(questions[i].effect.scty)
+        max_akraetia += Math.abs(questions[i].effect.akraetia)
+        max_anarche += Math.abs(questions[i].effect.anarche)
+        max_econ_asp += Math.abs(questions[i].effect.econ_asp)
+        max_econ_control += Math.abs(questions[i].effect.econ_control)
+        max_nationalism += Math.abs(questions[i].effect.nationalism)
+        max_cosmopolitanism += Math.abs(questions[i].effect.cosmopolitanism)
+
     }
     function init_question() {
         document.getElementById("question-text").innerHTML = questions[qn].question;
@@ -75,13 +78,15 @@ stats"></a></div></noscript>
     }
 
     function next_question(mult) {
-        econ += mult*questions[qn].effect.econ
-        dipl += mult*questions[qn].effect.dipl
-        govt += mult*questions[qn].effect.govt
-        scty += mult*questions[qn].effect.scty
+        econ_asp += mult*questions[qn].effect.econ_asp
+        econ_control += mult*questions[qn].effect.econ_control
+        cosmopolitanism += mult*questions[qn].effect.cosmopolitanism
+        akraetia += mult*questions[qn].effect.akraetia
+        anarche += mult*questions[qn].effect.anarche
+        nationalism += mult*questions[qn].effect.nationalism
         qn++;
         prev_answer = mult;
-        if (qn < questions.length) {
+        if (qn < questions.length /*3*/) {
             init_question();
         } else {
             results();
@@ -92,10 +97,12 @@ stats"></a></div></noscript>
             return;
         }
         qn--;
-        econ -= prev_answer * questions[qn].effect.econ;
-        dipl -= prev_answer * questions[qn].effect.dipl;
-        govt -= prev_answer * questions[qn].effect.govt;
-        scty -= prev_answer * questions[qn].effect.scty;
+        econ_asp -= prev_answer * questions[qn].effect.econ_asp;
+        econ_control -= prev_answer * questions[qn].effect.econ_control;
+        cosmopolitanism -= prev_answer * questions[qn].effect.cosmopolitanism;
+        akraetia -= prev_answer * questions[qn].effect.akraetia;
+        anarche -= prev_answer * questions[qn].effect.anarche;
+        nationalism -= prev_answer * questions[qn].effect.nationalism;
         prev_answer = null;
         init_question();
 
@@ -105,10 +112,16 @@ stats"></a></div></noscript>
     }
     function results() {
         location.href = `results.html`
-            + `?e=${calc_score(econ,max_econ)}`
-            + `&d=${calc_score(dipl,max_dipl)}`
-            + `&g=${calc_score(govt,max_govt)}`
-            + `&s=${calc_score(scty,max_scty)}`
+            + `?ea=${calc_score(econ_asp,max_econ_asp)}`
+            + `&co=${calc_score(cosmopolitanism,max_cosmopolitanism)}`
+            + `&ak=${calc_score(akraetia,max_akraetia)}`
+            + `&an=${calc_score(anarche,max_anarche)}`
+            + `&ec=${calc_score(econ_control,max_econ_control)}`
+            + `&na=${calc_score(nationalism,max_nationalism)}`
     }
+
+  // econ_asp represents economic_equality
+  // econ_control represents econ_capital_control
+  // nationalism represents civic_nationalism
 </script>
 </body>

@@ -139,46 +139,67 @@ div.text-wrapper {
     color: #222222;
     display: inline-block;
 }
-div.equality {
-    background-color: #f44336;
+div.econ_equality {
+    background-color: #efaeae;
     text-align: left;
     border-right-style: solid;
 }
-div.wealth {
-    background-color: #00897b;
+div.econ_eff {
+    background-color: #ff0000;
     text-align: right;
     border-left-style: solid;
 }
 div.liberty {
-    background-color: #ffeb3b;
+    background-color: #c0c5e8;
     text-align: left;
     border-right-style: solid;
 }
 div.authority {
-    background-color: #3f51b5;
+    background-color: #192894;
     text-align: right;
     border-left-style: solid;
 }
-div.peace {
-    background-color: #03a9f4;
-    text-align: right;
+div.cosmopolitan {
+    background-color: #97ccf4;
+    text-align: left;
     border-left-style: solid;
 }
-div.might {
-    background-color: #ff9800;
+div.autarky {
+    background-color: #0074ce;
+    text-align: right;
+    border-right-style: solid;
+}
+div.econ_labor {
+    background-color: #beeae3;
+    text-align: left;
+    border-left-style: solid;
+}
+div.econ_capital {
+    background-color: #006a58;
+    text-align: right;
+    border-right-style: solid;
+}
+div.rank {
+    background-color: #d7b5e2;
     text-align: left;
     border-right-style: solid;
 }
-div.progress {
-    background-color: #9c27b0;
+div.anarche {
+    background-color: #720097;
     text-align: right;
-    border-left-style: solid;
+    border-right-style: solid;
 }
-div.tradition {
-    background-color: #8bc34a;
+div.ethnic_national {
+    background-color: #f2b998;
     text-align: left;
     border-right-style: solid;
 }
+div.civic_national {
+    background-color: #ff5d00;
+    text-align: right;
+    border-right-style: solid;
+}
+
 span.weight-300 {
     font-weight: 300;
 }

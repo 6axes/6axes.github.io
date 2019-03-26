@@ -14,6 +14,17 @@ questions = [
         }
     },
     {
+        "question": "International trade is beneficial.",
+        "effect": {
+            "econ_asp": -5,
+	    "econ_control": -5,
+	    "nationalism": 0,
+            "cosmopolitanism": 10,
+            "akraetia": 10,
+            "anarche": 0
+        }
+    },
+    {
         "question": "It is necessary for the government to intervene in the economy to protect consumers.",
         "effect": {
             "econ_asp": 10,
@@ -22,6 +33,28 @@ questions = [
             "cosmopolitanism": 0,
             "akraetia": -10,
             "anarche": 0
+        }
+    },
+    {
+        "question": "The United Nations should be abolished.",
+        "effect": {
+            "econ_asp": 0,
+	    "econ_control": 0,
+	    "nationalism": -5,
+            "cosmopolitanism": -10,
+            "akraetia": 0,
+            "anarche": 0
+        }
+    },
+    {
+        "question": "It is very important to maintain law and order.",
+        "effect": {
+            "econ_asp": 0,
+	    "econ_control": 0,
+	    "nationalism": 0,
+            "cosmopolitanism": 0,
+            "akraetia": -10,
+            "anarche": -10
         }
     },
     {
@@ -54,17 +87,6 @@ questions = [
 	    "nationalism": 0,
             "cosmopolitanism": 0,
             "akraetia": -5,
-            "anarche": 0
-        }
-    },
-    {
-        "question": "International trade is beneficial.",
-        "effect": {
-            "econ_asp": -5,
-	    "econ_control": -5,
-	    "nationalism": 0,
-            "cosmopolitanism": 10,
-            "akraetia": 10,
             "anarche": 0
         }
     },
@@ -163,17 +185,6 @@ questions = [
 	    "econ_control": -10,
 	    "nationalism": 0,
             "cosmopolitanism": 0,
-            "akraetia": 0,
-            "anarche": 0
-        }
-    },
-    {
-        "question": "The United Nations should be abolished.",
-        "effect": {
-            "econ_asp": 0,
-	    "econ_control": 0,
-	    "nationalism": -5,
-            "cosmopolitanism": -10,
             "akraetia": 0,
             "anarche": 0
         }
@@ -330,17 +341,6 @@ questions = [
             "cosmopolitanism": 10,
             "akraetia": -10,
             "anarche": 0
-        }
-    },
-    {
-        "question": "It is very important to maintain law and order.",
-        "effect": {
-            "econ_asp": 0,
-	    "econ_control": 0,
-	    "nationalism": 0,
-            "cosmopolitanism": 0,
-            "akraetia": -10,
-            "anarche": -10
         }
     },
     {

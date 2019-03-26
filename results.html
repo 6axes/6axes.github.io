@@ -108,12 +108,12 @@ stats"></a></div></noscript>
         }
     }
 
-    econ_aspArray = ["Communist","Socialist","Social","Centrist","Market","Capitalist","Laissez-Faire"]
-    econ_controlArray = ["Communist","Socialist","Social","Centrist","Market","Capitalist","Laissez-Faire"]
-    diplArray = ["Cosmopolitan","Internationalist","Peaceful","Balanced","Patriotic","Nationalist","Chauvinist"]
+    econ_aspArray = ["Communist","Socialist","Social Democrat","Centrist","Free Market","Capitalist","Laissez-Faire"]
+    econ_controlArray = ["Syndicalist","Socialist","Labor","Centrist","Market","Capitalist","Corporatist"]
+    diplArray = ["Open Borders","Internationalist","Cosmopolitan","Balanced","Patriotic","Nationalist","Chauvinist"]
     akraetiaArray = ["Anarchist","Libertarian","Liberal","Moderate","Statist","Authoritarian","Totalitarian"]
-    anarcheArray = ["Revolutionary","Very Progressive","Progressive","Neutral","Traditional","Very Traditional","Reactionary"]
-    nationalismArray = ["Revolutionary","Very Progressive","Progressive","Neutral","Traditional","Very Traditional","Reactionary"]
+    anarcheArray = ["Revolutionary","Very Progressive","Progressive","Neutral","Conservative","Traditional","Reactionary"]
+    nationalismArray = ["Civic Nationalist","Civic participation","Progressive","Neutral","Traditional","Identarian","Ethnic Nationalist"]
   
     function setLabel(val,ary) {
         if (val > 100) { return "" } else
@@ -157,7 +157,7 @@ stats"></a></div></noscript>
     setBarValue("civic_nationalism", civic_nationalism)
 
     setBarValue("cosmopolitan", cosmopolitan)
-    setBarValue("autarky", anarche)
+    setBarValue("autarky", autarky)
 
   
     document.getElementById("authority-label").innerHTML = setLabel(akraetia, akraetiaArray)
@@ -171,11 +171,15 @@ stats"></a></div></noscript>
     ideodist = Infinity
     for (var i = 0; i < ideologies.length; i++) {
         dist = 0
-        dist += Math.pow(Math.abs(ideologies[i].stats.econ_asp - econ_equality), 2)
-        dist += Math.pow(Math.abs(ideologies[i].stats.akraetia - akraetia), 2)
-        dist += Math.pow(Math.abs(ideologies[i].stats.cosmopolitanism - cosmopolitan), 1.73856063)
-        dist += Math.pow(Math.abs(ideologies[i].stats.anarche - anarche), 1.73856063)
-        if (dist < ideodist) {
+        dist += Math.pow(ideologies[i].stats.akraetia - akraetia, 2)
+        dist += Math.pow(ideologies[i].stats.anarche - anarche, 2)
+        dist += Math.pow(ideologies[i].stats.econ_asp - econ_equality, 2)
+        dist += Math.pow(ideologies[i].stats.econ_control - econ_capital_control, 2)
+        dist += Math.pow(ideologies[i].stats.nationalism - civic_nationalism, 2)
+        dist += Math.pow(ideologies[i].stats.cosmopolitanism - cosmopolitan, 2)
+	dist = Math.sqrt(dist)
+
+	if (dist < ideodist) {
             ideology = ideologies[i].name
             ideodist = dist
         }
@@ -209,9 +213,9 @@ stats"></a></div></noscript>
         ctx.drawImage(img, 20, 410, 100, 100)
         img = document.getElementById("img-econ-efficiency")
         ctx.drawImage(img, 680, 410, 100, 100)
-        img = document.getElementById("img-econ-capital")
-        ctx.drawImage(img, 20, 530, 100, 100)
         img = document.getElementById("img-econ-labor")
+        ctx.drawImage(img, 20, 530, 100, 100)
+        img = document.getElementById("img-econ-capital")
         ctx.drawImage(img, 680, 530, 100, 100)
         img = document.getElementById("img-ethnic-national")
         ctx.drawImage(img, 20, 650, 100, 100)
